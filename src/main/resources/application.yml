@@ -5,7 +5,10 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://administrador.postgres.database.azure.com:5432/postgres?user=administrador&password=Badeggs13#&sslmode=require
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    name: spring-blog
   jpa:
     database: postgresql
     hibernate:
