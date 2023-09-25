@@ -18,7 +18,7 @@ public class BackendPitoreApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://frontend-pitore.web.app/","http://localhost:4200","https://frontend-pitore.firebaseapp.com/").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("https://frontend-pitore.web.app","http://localhost:4200","https://frontend-pitore.firebaseapp.com").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
