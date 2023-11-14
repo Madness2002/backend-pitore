@@ -15,10 +15,10 @@ public class BackendPitoreApplication {
 	}
 
 
-	@Value("${front1}")
+	@Value("${FRONT1}")
 	private String front1;
 
-	@Value("${front2}")
+	@Value("${FRONT2}")
 	private String front2;
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
