@@ -1,5 +1,6 @@
 package com.pitore.backendpitore;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -13,12 +14,18 @@ public class BackendPitoreApplication {
 		SpringApplication.run(BackendPitoreApplication.class, args);
 	}
 
+
+	@Value("${front1}")
+	private String front1;
+
+	@Value("${front2}")
+	private String front2;
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://frontend-pitore.web.app","http://localhost:4200","https://frontend-pitore.firebaseapp.com").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins(front1,"http://localhost:4200","front2").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
