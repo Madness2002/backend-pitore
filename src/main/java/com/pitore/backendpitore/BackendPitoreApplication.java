@@ -20,7 +20,7 @@ public class BackendPitoreApplication {
 
 
 	@Value("${cors.allowed-origins}")
-	private String front;
+	private String [] front;
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
