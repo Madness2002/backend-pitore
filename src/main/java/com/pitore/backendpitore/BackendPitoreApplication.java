@@ -15,17 +15,16 @@ public class BackendPitoreApplication {
 	}
 
 
-	@Value("${FRONT1}")
-	private String front1;
+	@Value("${FRONT}")
+	private String front;
 
-	@Value("${FRONT2}")
-	private String front2;
+
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins(front1,"http://localhost:4200","front2").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins(front,"http://localhost:4200").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
