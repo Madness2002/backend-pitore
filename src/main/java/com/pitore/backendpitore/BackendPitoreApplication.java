@@ -19,13 +19,14 @@ public class BackendPitoreApplication {
 	}
 
 
-
+	@Value("${cors.allowed-origins}")
+	private String front;
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://frontend-pitore.web.app","https://frontend-pitore.firebaseapp.com").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("front").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
