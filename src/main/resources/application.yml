@@ -19,4 +19,4 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 cors:
-  allowed-origins: ${FRONT}
+  allowed-origins: https://frontend-pitore.web.app/
