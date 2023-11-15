@@ -19,7 +19,7 @@ public class BackendPitoreApplication {
 	}
 
 
-	@Value("${FRONT}")
+	@Value("${cors.allowed-origins}")
 	private String front;
 
 
