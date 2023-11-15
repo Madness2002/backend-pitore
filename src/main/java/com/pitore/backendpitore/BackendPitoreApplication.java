@@ -24,7 +24,7 @@ public class BackendPitoreApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins(front,"http://localhost:4200").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins(front).allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
