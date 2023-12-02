@@ -43,6 +43,11 @@ public class IteracionController {
 
         try {
             List<Iteracion> iteraciones = iteracionService.getIteracionByC_grupo(c_grupo);
+            for (Iteracion i : iteraciones){
+
+                System.out.println("gaaaa:"+i.getdIteracion());
+            }
+
             return ResponseEntity.ok(iteraciones);
         } catch (Exception e) {
             // TODO Auto-generated catch block

@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+    url: jdbc:postgresql://localhost:5432/dbpitore
+    username: postgres
+    password: 1234
     name: spring-blog
   jpa:
     database: postgresql
@@ -19,4 +19,4 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 cors:
-  allowed-origins: ${FRONT}
+  allowed-origins: http://localhost:4200
